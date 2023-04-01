@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HOMEWORK WEEK 5</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body style="background-color: aliceblue;">
+    <h2> HOMEWORK WEEK 5 </h2>
+
+    <!-- Judul Tabs -->
+    <div class="tab">
+        <button class="tabLinks" onclick="tabs(event, 'register')"> Register </button>
+        <button class="tabLinks" onclick="tabs(event, 'list')"> List Peserta </button>
+    </div>
+
+    <!-- Konten Tabs -->
+    <div id="register" class="tabContents">
+        <form id="formPendaftaran">
+            <h3> Formulir Pendaftaran Peserta </h3>
+            <div class="input-group">
+                <label for="nama"> Nama Lengkap: </label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama anda" onkeyup="validasiNama()">
+                <span id="namaError"> Nama tidak boleh kosong </span>
+            </div>
+
+            <div class="input-group">
+                <label for="umur"> Umur: </label>
+                <input type="text" id="umur" name="umur" placeholder="Masukkan umur anda" onkeyup="validasiUmur()">
+                <span id="umurError"> Umur tidak boleh kosong </span>
+            </div>
+
+            <div class="input-group">
+                <label for="sangu"> Uang sangu: </label>
+                <input type="text" id="sangu" name="sangu" placeholder="Masukkan nominal sangu anda" onkeyup="validasiSangu()">
+                <span id="sanguError"> Uang sangu tidak boleh kosong </span>
+            </div>
+
+            <input type="button" id="button" class="button" value="submit" onclick="actionPush()">
+            <!-- <span id="submitError"> Data belum valid </span> -->
+        </form>
+    </div>
+
+    <div id="list" class="tabContents">
+        <h3> Tabel List Peserta </h3>
+        <div id="tabel"></div>
+        <br>
+        <div id="tabelAvg"></div>
+    </div>
+
+    
+    <script src="main.js"></script>
+</body>
+</html>
